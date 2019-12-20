@@ -1,11 +1,8 @@
 class Course
   @@all=[]
   attr_accessor :title, :schedule, :description
-  def initialize(title,schedule,description)
+  def initialize
     @@all << self
-    @title=title
-    @schedule=schedule
-    @description=description
   end
   def self.all
     @@all
