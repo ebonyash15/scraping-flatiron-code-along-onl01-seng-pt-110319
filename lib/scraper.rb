@@ -25,7 +25,7 @@ class Scraper
   end
   def make_courses
     self.get_courses.each do |course|
-      course=Course.new
+      p course.text.strip
     end
   end
 end
