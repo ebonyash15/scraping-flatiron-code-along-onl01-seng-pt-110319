@@ -22,7 +22,7 @@ class Scraper
     @courses=@doc.css("#course-grid.block.posts-holder")
     #id="#course-grid" class=".block", class=".posts-holder",
       #class=".post same-height-left/same-height-right", <h2>Web Development Immersive</h2>
-      p @courses
+    @courses
   end
   def make_courses
   end
