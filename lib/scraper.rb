@@ -18,7 +18,7 @@ class Scraper
   end
   def get_courses
     self.get_page
-    @courses=@doc.css("#course-grid.block")
+    @courses=@doc.css("#course-grid.block.posts-holder")
     #id="#course-grid" class=".block", class=".posts-holder",
       #class=".post same-height-left/same-height-right", <h2>Web Development Immersive</h2>
     p @courses
