@@ -19,15 +19,14 @@ class Scraper
   def get_courses
     self.get_page
     @courses=@doc.css("#course-grid.block")
-    # p @courses
   end
   def make_courses
     self.get_courses.each do |course|
       c=course.text.strip
       c=Course.new
-      #c.title=
-      #c.schedule=
-      #c.description=
+      #c.title=["h2"].text
+      #c.schedule=["em"]["class"]["date"].text
+      #c.description=["p"].text
     end
   end
 end
