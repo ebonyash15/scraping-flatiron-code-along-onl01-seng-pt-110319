@@ -22,11 +22,11 @@ class Scraper
   end
   def make_courses
     self.get_courses.each do |course|
-      c=course.text.strip
+    #  c=course.text.strip
       c=Course.new
-      #c.title=["h2"].text
-      #c.schedule=["em"]["class"]["date"].text
-      #c.description=["p"].text
+      c.title=course.search("h2").text.strip
+      c.schedule=course.search("em").text.strip
+      c.description=course.search("p").text.strip
     end
   end
 end
